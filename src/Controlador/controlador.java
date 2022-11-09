@@ -9,7 +9,7 @@ package Controlador;
 import Modelo.ArmaBO;
 import Modelo.EscudoBO;
 import Modelo.Partida;
-import Vista.Vista_batalla;
+import Vista.*;
 import Modelo.Superheroe;
 import Modelo.SuperheroeBO;
 import Modelo.*;
@@ -26,18 +26,25 @@ public class controlador implements ActionListener{
     
     private Vista_batalla vista;
     private Superheroe modelo;  
+    private Frm_addSuper vista_addSuper;
     SuperheroeBO subo = new SuperheroeBO();
     ArmaBO abo = new ArmaBO();
     EscudoBO ebo = new EscudoBO();
 
-    public controlador(Vista_batalla vista, Superheroe modelo) {
+    public controlador(Vista_batalla vista, Superheroe modelo, Frm_addSuper vista_addSuper) {
         this.vista = vista;
         this.modelo = modelo;
+        this.vista_addSuper = vista_addSuper;
         vista.btn_atacar.addActionListener(this);
+        this.vista_addSuper.mnu_item_addSuper(this);
+        
         ListarSuperheroe();
         ListarArma();
         ListarEscudo();
     }
+    
+    public controlador(){}
+    
     public void iniciar_vista(){
         vista.setTitle("Batalla de heroes!!!!!!!!!!!!!");
         vista.setLocationRelativeTo(null);  
@@ -130,6 +137,11 @@ public class controlador implements ActionListener{
             Escudo escudo = new Escudo(escudo_victima,proteccion);
             Partida Enfrenteamiento = new Partida(atacante, victima, escudo, arma );
             vista.lbl_resultado.setText("El resultado es: "+Enfrenteamiento.atacar() ); 
+        } else{
+         if (e.getSource().equals(vista.mnu_item_addSuper)){
+             
+         }
+        
         }
         
     }

@@ -7,7 +7,7 @@ package poo2_inicial;
 
 import Controlador.controlador;
 import Modelo.Superheroe;
-import Vista.Vista_batalla;
+import Vista.*;
 
 /**
  *
@@ -20,8 +20,9 @@ public class POO2_inicial {
      */
     public static void main(String[] args) {
         Superheroe modelo =  new Superheroe();
-        Vista_batalla vista = new Vista_batalla();        
-        controlador control = new controlador(vista, modelo);
+        Vista_batalla vista = new Vista_batalla();  
+        Frm_addSuper vista_addSuper = new Frm_addSuper();
+        controlador control = new controlador(vista, modelo, vista_addSuper);
         control.iniciar_vista();
         vista.setVisible(true);
         

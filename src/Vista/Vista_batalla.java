@@ -27,6 +27,9 @@ public class Vista_batalla extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
+        jMenuItem3 = new javax.swing.JMenuItem();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         lst_heroe_ataca = new javax.swing.JComboBox<>();
@@ -39,6 +42,19 @@ public class Vista_batalla extends javax.swing.JFrame {
         lst_heroe_escudo = new javax.swing.JComboBox<>();
         jLabel3 = new javax.swing.JLabel();
         btn_atacar = new javax.swing.JButton();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        mnu_super = new javax.swing.JMenu();
+        mnu_item_addSuper = new javax.swing.JMenuItem();
+        mnu_arma = new javax.swing.JMenu();
+        mnu_item_addArma = new javax.swing.JMenuItem();
+        mnu_esc = new javax.swing.JMenu();
+        mnu_item_addEsc = new javax.swing.JMenuItem();
+
+        jMenuItem1.setText("jMenuItem1");
+
+        jMenuItem2.setText("jMenuItem2");
+
+        jMenuItem3.setText("jMenuItem3");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -122,6 +138,39 @@ public class Vista_batalla extends javax.swing.JFrame {
 
         btn_atacar.setText("Jugar");
 
+        mnu_super.setText("Superheroe");
+
+        mnu_item_addSuper.setText("Agregar");
+        mnu_item_addSuper.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mnu_item_addSuperActionPerformed(evt);
+            }
+        });
+        mnu_super.add(mnu_item_addSuper);
+
+        jMenuBar1.add(mnu_super);
+
+        mnu_arma.setText("Arma");
+
+        mnu_item_addArma.setText("Agregar");
+        mnu_item_addArma.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mnu_item_addArmaActionPerformed(evt);
+            }
+        });
+        mnu_arma.add(mnu_item_addArma);
+
+        jMenuBar1.add(mnu_arma);
+
+        mnu_esc.setText("Escudo");
+
+        mnu_item_addEsc.setText("Agregar");
+        mnu_esc.add(mnu_item_addEsc);
+
+        jMenuBar1.add(mnu_esc);
+
+        setJMenuBar(jMenuBar1);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -148,6 +197,14 @@ public class Vista_batalla extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void mnu_item_addArmaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnu_item_addArmaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_mnu_item_addArmaActionPerformed
+
+    private void mnu_item_addSuperActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnu_item_addSuperActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_mnu_item_addSuperActionPerformed
 
     /**
      * @param args the command line arguments
@@ -190,6 +247,10 @@ public class Vista_batalla extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    public javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     public javax.swing.JLabel lbl_resultado;
@@ -197,5 +258,11 @@ public class Vista_batalla extends javax.swing.JFrame {
     public javax.swing.JComboBox<String> lst_heroe_ataca;
     public javax.swing.JComboBox<String> lst_heroe_escudo;
     public javax.swing.JComboBox<String> lst_heroe_recibe;
+    public javax.swing.JMenu mnu_arma;
+    public javax.swing.JMenu mnu_esc;
+    public javax.swing.JMenuItem mnu_item_addArma;
+    public javax.swing.JMenuItem mnu_item_addEsc;
+    public javax.swing.JMenuItem mnu_item_addSuper;
+    public javax.swing.JMenu mnu_super;
     // End of variables declaration//GEN-END:variables
 }
